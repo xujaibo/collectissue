@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/authorization/authorization",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/issue-detail/issue-detail",
+    "pages/select-project/select-project",
+    "pages/collect-problem/collect-problem",
+    "pages/rate/rate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbf8f4",
+    "backgroundColor": "#fbf8f4",
+    "navigationBarTitleText": "问题反馈",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,4 @@
+<!--components/scroll-textarea/scroll-textarea.wxml-->
+<view class="area-style" hidden="{{hidden}}">
+  <van-field bind:input="_handleTap" disabled="{{disabled}}" value="{{ content }}" type="textarea" placeholder="{{placeholderData}}" border="{{ false }}" input-class="textarea-style" placeholder-style="color:#A3BDCE;font-size:32rpx" maxlength="200"/>
+</view>

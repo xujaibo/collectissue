@@ -1,0 +1,46 @@
+/* components/upload-file/index.wxss */
+/* 上传文件 */
+.optClass{
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+  color:#A3BDCE;
+}
+.optClass .uploadimgbox{
+    flex: 0 0 33.333%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.optClass .uploadimgbox .delbtn{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 10rpx;
+    z-index: 98;
+}
+.optClass .uploadimg,.optClass .uploadbtn{
+    display: block;
+    width: 100%;
+    height: 180rpx;
+}
+.subBtnBox{
+  margin-top: 20rpx;
+}
+.subBtnBox button{
+  font-size: 32rpx;
+  color: rgba(0,0,0,.6)
+}
+.progress{
+  position: absolute;
+  bottom: 10rpx;
+}

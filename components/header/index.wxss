@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-top: 30rpx;
+}
+
+.top-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-title {
+    font-size: 56rpx;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000000;
+}
+
+.bottom-title {
+    font-size: 48rpx;
+    font-weight: 300;
+    line-height: 66rpx;
+}
+
+.blue-line {
+    width: 64rpx;
+    height: 3px;
+    background: #0099FF;
+    margin-top: 30rpx;
+}

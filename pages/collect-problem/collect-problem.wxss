@@ -1,0 +1,60 @@
+/* pages/collect-problem/collect-problem.wxss */
+.container-content{
+  padding: 0 60rpx;
+}
+
+/* 问题内容以及数字统计 */
+.optClass{
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+  color:#A3BDCE;
+}
+.optClass1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26rpx;
+  color:#A3BDCE;
+}
+.optClass .optName{
+  height: 40rpx;
+}
+.optClass .optContent{
+  height: 40rpx;
+}
+
+
+/* 提交 */
+.subBtnBox .subBtn{
+  width:632rpx;
+  height:88rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  background:rgba(0,153,255,1);
+  box-shadow:0rpx 10rpx 16rpx rgba(0,153,255,0.2);
+  border-radius:126rpx;
+  margin:60rpx 0;
+}
+.subBtnBox .subBtn.button-hover{
+  opacity: .8
+}
+
+/* 获取手机号 */
+.get-phone-num{
+  width: 164rpx;
+}
+.input-number .van-button--small{
+  padding: 0;
+}
+
+.img-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:72rpx;
+  height:72rpx;
+  background:rgba(0,153,255,1);
+  border-radius:50%;
+  opacity:1;
+}
+

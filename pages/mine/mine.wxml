@@ -1,0 +1,47 @@
+<!--pages/mine/mine.wxml-->
+<view class="header-container">
+  <view class="top-title">{{topTitle}}</view>
+  <view class="img-background">
+    <image class="right-top-icon" bindtap="toCollect" src="/images/collect_issue.png"></image>
+  </view>
+
+</view>
+<view class="progress">
+  <van-tabs border="{{false}}" active="{{ active }}" bind:click="getFeedbackList">
+    <van-tab wx:for="{{tabNameList}}" wx:key="{{index}}" title="{{item.title}}"></van-tab>
+  </van-tabs>
+</view>
+
+<view class="content-container" wx:if="{{feedbackList.length>0}}">
+  <view class="already-deal" wx:for="{{feedbackList}}" wx:key="{{index}}">
+    <view bindtap="goDetail" data-id="{{item.Id}}">
+      <view class="list-header">
+        <view class="deal-title">{{item.Project}}</view>
+      </view>
+      <view class="van-multi-ellipsis--l2 list-content">{{item.Content}}</view>
+      <view style="display:flex">
+        <view class="list-img">
+          <image wx:for="{{item.imgarry}}" wx:key="{{index}}" src="https://osc.yunxuetang.com.cn/workdesk{{item}}"></image>
+        </view>
+        <!-- <view class="list-img">
+          <video show-center-play-btn="{{false}}" controls="{{false}}" wx:for="{{item.videoarry}}" wx:key="{{index}}" src="http://172.17.118.212:8080{{item}}"></video>
+        </view> -->
+      </view>
+    </view>
+    <view class="list-time">
+      <image class="time-img" src="../../images/time.png"></image>
+      <view class="time-content">{{item.Created}}</view>
+      <button wx:if="{{level===3}}" class="evaluate" data-id="{{item.Id}}" bindtap="goEvaluate">评价</button>
+      <button wx:if="{{level===4}}" class="evaluate1" data-id="{{item.Id}}" bindtap="goEvaluate">已评价</button>
+    </view>
+  </view>
+</view>
+
+<view wx:else class='empty'>
+  <view class='empty1'>
+    <image src='../../images/empty.png'></image>
+  </view>
+  <view class='empty1'>
+    <text>暂无信息</text>
+  </view>
+</view>

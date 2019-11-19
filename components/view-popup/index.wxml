@@ -1,0 +1,16 @@
+<!--components/view-popup.wxml-->
+<!-- 所属项目 -->
+<view class="input-container">
+  <text class="title {{titleClass}}">所属项目</text>
+  <view class="inner-input" bindtap="handleFocus">
+    <view class="{{boderClass}}">{{projectName}}</view>
+    <view>
+      <image src="/images/select-dowm.png" style="width:64rpx;height:64rpx"></image>
+    </view>
+  </view>
+  <view class="line {{lineClass}}"></view>
+</view>
+
+<van-popup show="{{ popupShow }}" position="bottom">
+  <van-picker show-toolbar columns="{{ columnsData }}" bind:cancel="onCancel" bind:confirm="onConfirm"/>
+</van-popup>

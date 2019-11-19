@@ -1,0 +1,56 @@
+<!--pages/issue-detail/issue-detail.wxml-->
+<view class="loading-style" wx:if="{{loadingFlag}}">
+  <van-loading color="#0099FF" type="spinner"/>
+  <text class="index-loading-text">正在加载中...</text>
+</view>
+
+<view wx:else>
+  <view class="header-container">
+    <view class="top-title">{{topTitle}}</view>
+    <view class="img-background">
+      <image class="right-top-icon" bindtap="toCollect" src="/images/collect_issue.png"></image>
+    </view>
+  </view>
+  <view class="content-container">
+    <view class="already-deal" bindtap="goDetail">
+      <view class="list-header">
+        <view class="deal-title">{{Project}}</view>
+      </view>
+      <view class="list-content">{{Content}}</view>
+      <view style="display:flex">
+        <view class="list-img">
+          <image wx:for="{{imgarry}}" wx:key="{{index}}" src="{{item}}" bindtap='previewImg' data-index='{{index}}'></image>
+        </view>
+        <view class="list-img">
+          <video wx:for="{{videoarry}}" wx:key="{{index}}" src="{{item}}"></video>
+        </view>
+      </view>
+      <view class="list-time">
+        <image class="time-img" src="../../images/time.png"></image>
+        <view class="time-content">{{Created}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 中间的分隔 -->
+  <view class="middledivi"></view>
+
+  <!-- 处理结果 -->
+  <view class="deal-result">
+    <view class="deal-content">处理结果</view>
+    <view class="deal-detail" wx:if="{{Result===''}}">暂无结果，请您耐心等待。</view>
+    <view wx:else class="deal-detail">{{Result}}</view>
+  </view>
+
+  <!-- 进度显示 -->
+  <view class="deal-progress">
+    <m-steps steps="{{ logs }}" active="{{ active }}" direction="vertical">
+    </m-steps>
+  </view>
+
+  <!-- 立即评价 -->
+  <view class='subBtnBox'>
+    <button wx:if="{{level==='3'}}" class='subBtn' type='button' bindtap='goEvaluate'>立即评价</button>
+    <button wx:if="{{level==='4'}}" class='subBtn' type='button' bindtap='checkEvaluate'>查看评价</button>
+  </view>
+</view>

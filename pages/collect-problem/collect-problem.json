@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-field": "/miniprogram_npm/vant-weapp/field/index",
+    "van-picker": "/miniprogram_npm/vant-weapp/picker/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "s-header": "/components/header/index",
+    "x-input": "/components/trans-input/index",
+    "v-popup": "/components/view-popup/index",
+    "t-textarea": "/components/scroll-textarea/index",
+    "u-upload": "/components/upload-file/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColor": "#fff"
+}

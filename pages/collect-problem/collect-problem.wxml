@@ -1,0 +1,30 @@
+<!--pages/collect-problem/collect-problem.wxml-->
+<view class="container-content">
+  <s-header header-data="{{headerData}}">
+    <view class="img-background">
+      <image class="right-top-icon" bindtap="toCollect" src="/images/gomine1.png"></image>
+    </view>
+  </s-header>
+  <!-- 反馈人 -->
+  <x-input name-data="{{nameData}}" phone-data="{{feedbackName}}" bindnameInputevent="getName"></x-input>
+  <!-- 联系方式 -->
+  <x-input disabled-data="{{disabledFlag}}" phone-data="{{phoneNum}}" name-data="{{telData}}" class="input-number">
+    <van-button wx:if="{{phoneFlag}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" size="small" type="info" custom-class="get-phone-num">获取手机号</van-button>
+  </x-input>
+  <!-- 所属项目 -->
+  <v-popup bindselectevent="mySelectEvent" project-name="{{projectName}}" columns-data="{{columnsData}}" columns-object="{{columnsObject}}"></v-popup>
+  <!-- 问题内容 -->
+  <view class="optClass1">
+    <view class='optName'>问题内容</view>
+    <view class='optContent'>{{arealength}}/200字</view>
+  </view>
+  <!-- 滚动textarea -->
+  <t-textarea hidden="{{!textareaFlag}}" bindinputevent="myInputEvent" placeholder-data="{{placeholderData}}"></t-textarea>
+  <view hidden="{{textareaFlag}}" style="margin-top:26rpx;height:200rpx;color:#A3BDCE;font-size:32rpx">{{areaMessage===''?'请输入您的问题（限200字）':areaMessage}}</view>
+  <!-- 上传文件 -->
+  <u-upload id="submitFiles" binduploadEvent="getFileIdList"></u-upload>
+  <!-- 提交 -->
+  <view class='subBtnBox'>
+    <button class='subBtn' type='button' bindtap='subFormData'>提交</button>
+  </view>
+</view>

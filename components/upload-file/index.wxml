@@ -1,0 +1,23 @@
+<!--components/upload-file/index.wxml-->
+<view class="optClass" style='flex-wrap:wrap;'>
+<!-- 上传图片 -->
+  <view class='uploadimgbox' wx:for="{{upImgArr}}" wx:key="item">
+    <image class='uploadimg' src='{{item.path}}' data-presrc="{{item.path}}" bindtap='previewImg' mode='aspectFill'></image>
+    <view class='progress' wx:if="{{upFilesProgress}}">
+      {{item.progress}}%
+    </view>
+    <view class='delbtn' data-index="{{index}}" data-type="image" bindtap='delFile'>X</view>
+  </view>
+<!-- 上传视频 -->
+  <view class='uploadimgbox' wx:for="{{upVideoArr}}" wx:key="item">
+    <video class='uploadimg' src="{{item.tempFilePath}}" controls></video>
+    <view class='progress' wx:if="{{upFilesProgress}}">
+      {{item.progress}}%
+    </view>
+    <view class='delbtn' data-index="{{index}}" data-type="video" bindtap='delFile'>X</view>
+  </view>
+<!-- 上传按钮 -->
+  <view class='uploadimgbox' wx:if="{{upFilesBtn}}">
+    <image class='uploadbtn' bindtap='uploadFiles' src='../../images/addimgsbtn.png'></image>
+  </view> 
+</view>

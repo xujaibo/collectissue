@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-loading": "/miniprogram_npm/vant-weapp/loading/index",
+    "s-header": "/components/header/index",
+    "s-auth-code": "/components/auth-code/index",
+    "s-company-info": "/components/company-info/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index"
+  }
+}

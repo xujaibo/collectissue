@@ -1,0 +1,61 @@
+.project-container {
+  margin-top: 80rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.project-name {
+  font-size: 32rpx;
+  padding: 18rpx 54rpx;
+  color: #a3bdce;
+  border: 2px solid #dae5ec;
+  background: #fff;
+  border-radius: 200rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.hov {
+  border: 2px solid #09f;
+  color: #09f;
+}
+
+.auth-botton1 {
+  width: 632rpx;
+  position: absolute;
+  bottom: 184rpx;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  background: #09f;
+  color: #fff;
+  font-size: 36rpx;
+  border: none;
+  border-radius: 126rpx;
+  box-shadow: 0px 5px 8px rgba(0, 153, 255, 0.2);
+}
+
+.other-project {
+  width: 78px;
+  height: 40px;
+  background: rgba(0, 153, 255, 1);
+  opacity: 1;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.other-project text {
+  width: 32px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+}

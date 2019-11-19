@@ -1,0 +1,16 @@
+<view class="loading-style" wx:if="{{loadingFlag}}">
+  <van-loading color="#0099FF" type="spinner"/>
+  <text class="index-loading-text">正在获取授权信息...</text>
+</view>
+<view class="container bg-container" wx:else>
+    <s-header header-data="{{headerData}}"></s-header>
+    <text class="auth-code-tip">请输入您的授权码</text>
+    <s-auth-code id="passwordBox" inputLength="{{4}}" inputWidth="128rpx" inputHeight="118rpx" showValue="{{true}}" bind:complete="setupPasswordComplete"></s-auth-code>
+    <button class="auth-botton" bindtap="next">授权登录</button>
+    <view class="terms-check-container" hover-class="none" hover-stop-propagation="false">
+        <van-checkbox value="{{ termsChecked }}" bind:change="onChange">
+            <text class="issue-check">登录即代表同意<text style="color: #0099FF;">《问题收集在线服务条款》</text></text>
+        </van-checkbox>
+    </view>
+    <s-company-info></s-company-info>
+</view>

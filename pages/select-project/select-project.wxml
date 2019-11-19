@@ -1,0 +1,13 @@
+<view class="container bg-container">
+  <s-header header-data="{{headerData}}"></s-header>
+  <view class="project-container">
+    <block wx:for="{{projectList}}" wx:key="{{index}}">
+      <text bindtap="selectProject" data-index="{{index}}" data-id="{{item.Project_Id}}" data-name="{{item.Project_Name}}" class="project-name {{index === selectIndex ? 'hov' : ''}}">{{item.Project_Name}}</text>
+    </block>
+  </view>
+  <view class="other-project" bindtap="goOther">
+    <text>其他</text>
+  </view>
+  <button class="auth-botton1" bindtap="submitProject">确定</button>
+  <s-company-info></s-company-info>
+</view>

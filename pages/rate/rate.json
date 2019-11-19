@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "s-rate": "/components/rate/index",
+        "s-star-rate": "/components/star-rate/index",
+        "s-header": "/components/header/index",
+        "t-textarea": "/components/scroll-textarea/index",
+        "u-upload": "/components/upload-file/index"
+    },
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+}

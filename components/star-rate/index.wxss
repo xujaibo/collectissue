@@ -1,0 +1,40 @@
+.com-rating {
+    display: flex;
+    position: relative;
+}
+
+.rating-off,
+.rating-on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.com-rating .rating-icon,
+.com-rating .rating-on,
+.com-rating .rating-off {
+    letter-spacing: 20rpx;
+}
+
+.com-rating .rating-icon:not(:last-child) {
+    margin-right: 14rpx;
+}
+
+.com-rating .rating-on {
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.com-rating .rating-off {
+    padding: 0;
+    margin: 0;
+}
+
+.rate-text {
+    font-size: 30rpx;
+    line-height: 60rpx;
+    margin-left: 32rpx;
+    color: #A3BDCE;
+}

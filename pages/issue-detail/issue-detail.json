@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-loading": "/miniprogram_npm/vant-weapp/loading/index",
+    "m-steps": "/components/steps/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColor": "#fff"
+}

@@ -1,0 +1,9 @@
+<!--components/trans-input.wxml-->
+<view class="input-container">
+  <text class="title {{titleClass}}">{{nameData}}</text>
+  <view class="inner-input">
+    <input value="{{phoneData}}" class="weui-input {{boderClass}}" bindfocus="handleFocus" bindblur="handleBlur" bindinput="bindKeyInput" />
+    <slot></slot>
+  </view>
+  <view class="line {{lineClass}}"></view>
+</view>

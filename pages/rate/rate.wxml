@@ -1,0 +1,29 @@
+<view class="container-content">
+  <s-header header-data="{{headerData}}">
+    <view class="img-background">
+      <image class="right-top-icon" bindtap="toCollect" src="/images/collect_issue.png"></image>
+    </view>
+  </s-header>
+  <view class="rate-container">
+    <text class="rate-text">整体评价</text>
+    <s-star-rate max="5" disabled="{{starFlag}}" rating='{{Grade}}' bindchange='handleStarChange'></s-star-rate>
+  </view>
+  <!-- 滚动textarea -->
+  <t-textarea bindinputevent="myInputEvent" content="{{Content}}" disabled="{{textareaFlag}}" class="textarea-container" placeholder-data="{{placeholderData}}"></t-textarea>
+  <view class="divider"></view>
+  <view class="rate-container">
+    <text class="rate-text">响应速度</text>
+    <s-rate max="5" disabled="{{speedFlag}}" rating='{{ResponseSpeedGrade}}' bindchange='handleSpeedChange'></s-rate>
+  </view>
+  <view class="rate-container">
+    <text class="rate-text">服务态度</text>
+    <s-rate max="5" disabled="{{serviceFlag}}" rating='{{ServiceAttitudeGrade}}' bindchange='handleServiceChange'></s-rate>
+  </view>
+  <view class="rate-container">
+    <text class="rate-text">处理结果</text>
+    <s-rate max="5" disabled="{{resultFlag}}" rating='{{ResultGrade}}' bindchange='handleResultChange'></s-rate>
+  </view>
+  <view class='subBtnBox'>
+    <button wx:if="{{level==='3'}}" class='auth-botton1' type='button' bindtap='submitRate'>发表</button>
+  </view>
+</view>
